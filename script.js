@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const viewSelector = document.getElementById("viewSelector");
     const body = document.body;
 
-    // Add task to list
     function addTask() {
         const time = timeInput.value;
         const task = taskInput.value.trim();
@@ -30,31 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
         taskInput.value = "";
     }
 
-    // Event listener for adding task via button
     document.querySelector("button").addEventListener("click", addTask);
 
-    // Event listener for adding task via Enter key
     taskInput.addEventListener("keypress", (event) => {
         if (event.key === "Enter") {
             addTask();
         }
     });
 
-    // Toggle between light and dark themes
     function toggleTheme() {
         body.classList.toggle("dark-theme");
     }
 
-    // Sync Calendar feature
     function syncCalendar() {
         alert("Calendar sync feature coming soon!");
     }
 
-    // Set up the theme and calendar actions
     document.querySelector("button[onclick='toggleTheme()']").addEventListener("click", toggleTheme);
     document.querySelector("button[onclick='syncCalendar()']").addEventListener("click", syncCalendar);
 
-    // Handle view changes
     viewSelector.addEventListener("change", () => {
         alert(`Switched to ${viewSelector.value} view!`);
     });
