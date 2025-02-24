@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day Planner</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Day Planner</h1>
+            <div class="auth-links">
+                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <label for="viewSelector">View:</label>
+        <select id="viewSelector">
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+            <option value="monthly">Monthly</option>
+        </select>
+        <input type="time" id="timeInput">
+        <input type="text" id="taskInput" placeholder="Enter your task">
+        <select id="priorityInput">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+        <button onclick="toggleTheme()">Toggle Theme</button>
+        <button onclick="syncCalendar()">Sync Calendar</button>
+        <ul id="taskList"></ul>
+        <div class="notes">
+            <h2>Notes</h2>
+            <textarea id="noteSection" placeholder="Write your notes here..."></textarea>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 Vinaykrishna.s</p>
+    </footer>
+</body>
+</html>
